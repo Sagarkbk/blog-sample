@@ -182,7 +182,7 @@ likeRouter.get("/blogLikes/:blogId", async (c) => {
   }
 });
 
-blogRouter.get("/commentLikes/:blogId/:commentId", async (c) => {
+likeRouter.get("/commentLikes/:blogId/:commentId", async (c) => {
   const prisma = new PrismaClient({
     datasourceUrl: c.env.DATABASE_URL,
   }).$extends(withAccelerate());
